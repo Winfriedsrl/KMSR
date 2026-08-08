@@ -1,0 +1,3 @@
+[
+  {"model_type": "Dense search", "match_field": "periodo_content", "index": "wf_periodi_aggiornato", "vectorizer": "text-embedding-3-large", "k": 30, "data_points": 30, "reranker_config": {"llm_model": "gpt-5-mini", "reranker_results": 30, "k": 10}}
+]

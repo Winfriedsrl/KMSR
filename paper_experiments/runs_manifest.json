@@ -1,0 +1,90 @@
+{
+  "_comment": "Provenance of the paper's numbers: for each model, the run that produced its row of Table 1. Consumed by make_table1.py. After re-running the experiments, replace 'run' with the new IDs (printed by evaluate-paper as 'Run dir').",
+  "gt": "paper_experiments/data/wf_test_set_all.csv",
+  "_gt_note": "Same file (identical sha256) as the internal data/final/gt/wf_test_set_all.csv, which is what the archived runs record in their meta.json. Replaying those runs is unaffected: make_table1.py reads gt_context.json from inside each run, never meta.json's gt_reference.",
+  "runs_dir": "runs/paper_hard",
+  "models": [
+    {
+      "id": "B1",
+      "label": "Sparse Baseline",
+      "corpus": "all",
+      "config": "paper_experiments/configs/B1_sparse_all.json",
+      "run": "run_20260627_161717_311228",
+      "paper_table1": {"weighted_recall": 0.421, "weighted_ranking": 0.374}
+    },
+    {
+      "id": "B2",
+      "label": "Dense Baseline",
+      "corpus": "all",
+      "config": "paper_experiments/configs/B2_dense_all.json",
+      "run": "run_20260627_173517_190627",
+      "paper_table1": {"weighted_recall": 0.437, "weighted_ranking": 0.381}
+    },
+    {
+      "id": "B3",
+      "label": "Hybrid Baseline",
+      "corpus": "all",
+      "config": "paper_experiments/configs/B3_hybrid_all.json",
+      "run": "run_20260627_190149_070149",
+      "paper_table1": {"weighted_recall": 0.478, "weighted_ranking": 0.410}
+    },
+    {
+      "id": "B4",
+      "label": "Sparse Baseline",
+      "corpus": "restricted",
+      "config": "paper_experiments/configs/B4_sparse_restricted.json",
+      "run": "run_20260626_231052_215034",
+      "paper_table1": {"weighted_recall": 0.497, "weighted_ranking": 0.436}
+    },
+    {
+      "id": "B5",
+      "label": "Dense Baseline",
+      "corpus": "restricted",
+      "config": "paper_experiments/configs/B5_dense_restricted.json",
+      "run": "run_20260626_231116_765270",
+      "paper_table1": {"weighted_recall": 0.440, "weighted_ranking": 0.398}
+    },
+    {
+      "id": "B6",
+      "label": "Hybrid Baseline",
+      "corpus": "restricted",
+      "config": "paper_experiments/configs/B6_hybrid_restricted.json",
+      "run": "run_20260627_002814_469184",
+      "paper_table1": {"weighted_recall": 0.492, "weighted_ranking": 0.432}
+    },
+    {
+      "id": "K1",
+      "label": "KMSR: 2-stage map.",
+      "corpus": "off./circ.off. comb.",
+      "config": "paper_experiments/configs/K1_kmsr_2stage_map.json",
+      "run": "run_20260629_093549_474218",
+      "paper_table1": {"weighted_recall": 0.576, "weighted_ranking": 0.474}
+    },
+    {
+      "id": "K2",
+      "label": "+ query reduction",
+      "corpus": "off./circ.off. comb.",
+      "config": "paper_experiments/configs/K2_kmsr_query_reduction.json",
+      "run": "run_20260629_074919_641832",
+      "paper_table1": {"weighted_recall": 0.615, "weighted_ranking": 0.481}
+    },
+    {
+      "id": "K3",
+      "label": "+ LLM reranking",
+      "corpus": "off./circ.off. comb.",
+      "config": "paper_experiments/configs/K3_kmsr_llm_reranking.json",
+      "run": "run_20260627_014723_777468",
+      "paper_table1": {"weighted_recall": 0.706, "weighted_ranking": 0.625}
+    },
+    {
+      "id": "A1",
+      "label": "Ablation: KMSR - mapping",
+      "corpus": "off./circ.off. comb.",
+      "config": "paper_experiments/configs/A1_kmsr_no_mapping.json",
+      "run": "run_20260629_075017_042397",
+      "runs_dir": "runs/paper_hard_altri",
+      "paper_table1": {"weighted_recall": 0.488, "weighted_ranking": null},
+      "_note": "Not a row of Table 1: this is the 0.488 value cited in Section 7 ('without it the two-stage pool stays at 0.488')."
+    }
+  ]
+}

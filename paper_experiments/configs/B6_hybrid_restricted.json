@@ -1,0 +1,3 @@
+[
+  {"model_type": "Fusion (RRF)", "match_field": "periodo_content", "k": 30, "rrf_config": {"rrf_k": 60, "window_size": 100, "retriever_a": {"kind": "Sparse search", "match_field": "periodo_content"}, "retriever_b": {"kind": "Dense search", "match_field": "periodo_content", "vectorizer": "text-embedding-3-large"}}, "reranker_config": {"llm_model": "gpt-5-mini", "reranker_results": 30, "k": 10}}
+]
